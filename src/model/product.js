@@ -55,7 +55,7 @@ class ClsProduct {
                 category: `category_${i}`,
                 name: `name_${i}`,
                 price: `${Math.floor(Math.random() * (1000 - 1 + 1)) + 1}`,
-                cover:`https://plus.google.com/photos/108098507190831277284/album/6225761888784442625/6225761890321565666`
+                cover:``
             }
             promises.push(this.insertProduct(product))
         }

@@ -18,8 +18,7 @@ class ClsProductController {
             app.post('/product', (req, res, next) => {
 
                 product.insertProduct(req.body).then((result) => {
-                    // res.render('main/addproduct');
-                    res.send('ok');
+                    res.send('inserted!');
                 });
 
             });
@@ -27,14 +26,12 @@ class ClsProductController {
 
                 product.getProudctList(req).then((products) => {
                     res.render('main/productlist', products);
-                    // res.send('ok');
                 });
 
             })
             app.get('/fakeproduct', (req, res) => {
 
                 product.saveDummayProuduct(req).then((products) => {
-                    //res.render('main/productlist', { products: products, newArrivalList: 'From Mumbai and Delhi' });
                     res.send('dummy proudct inserted!');
                 });
 
